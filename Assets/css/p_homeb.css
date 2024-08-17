@@ -1,0 +1,69 @@
+.welcome-hero2 {
+    position: relative;
+    background: url(../img/biblibanner.jpg)no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 570px;
+}
+
+.welcome-hero2:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.welcome-hero-txt2 {
+    position: relative;
+    text-align: center;
+    /* padding: 170px 0 116px; */
+    padding: 170px 0;
+
+}
+
+.welcome-hero-txt2 h2 {
+    font-size: 42px;
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 45px;
+}
+
+@media screen and (max-width:1199px) {
+    .welcome-hero-txt2 h2 {
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width:991px) {
+    .welcome-hero-txt2 h2 {
+        line-height: 1.6;
+    }
+
+    .welcome-hero-txt2 {
+        /* padding: 160px 0 372px; */
+        padding: 160px 0;
+
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+}
+
+@media screen and (max-width: 480px) {
+    .welcome-hero2 h2 {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    .welcome-hero-txt2 h2 {
+        font-size: 30px;
+        line-height: 1.5;
+    }
+}
+

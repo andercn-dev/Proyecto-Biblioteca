@@ -1,0 +1,74 @@
+/* Css de Paginacion */
+/* Estilos generales para el contenedor de paginación */
+.pagination-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px 0;
+    gap: 5px;
+}
+
+/* Estilos para los botones de paginación */
+.page-item {
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px 15px;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 14px;
+    text-align: center;
+    flex: 1 0 30px;
+}
+
+/* Estilo para el botón de la página activa */
+.page-item.active {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #007bff;
+}
+
+/* Estilo para el botón de paginación al pasar el cursor */
+.page-item:hover {
+    background-color: #e0e0e0;
+}
+
+/* Estilo para el botón de paginación deshabilitado */
+.page-item.disabled {
+    background-color: #e0e0e0;
+    color: #aaa;
+    cursor: not-allowed;
+    border: 1px solid #ddd;
+}
+
+/* Estilo para los puntos suspensivos */
+.page-item.ellipsis {
+    background-color: transparent;
+    border: none;
+    cursor: default;
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 600px) {
+    .pagination-container {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+    }
+
+    .page-item {
+        font-size: 12px;
+        padding: 6px 10px;
+        margin: 0 2px;
+    }
+
+    /* Ocultar los puntos suspensivos en pantallas pequeñas para reducir la desorden */
+    .page-item.ellipsis {
+        display: none;
+    }
+
+    .page-item {
+        min-width: 25px;
+    }
+}

@@ -1,0 +1,111 @@
+/* Estilo general del modal */
+.modal3 {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 800px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    z-index: 1050;
+    animation: fadeIn 0.3s;
+}
+
+.modal-body3 {
+    padding: 25px 30px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+/* Contenedor con scroll para la tabla */
+.table-container {
+    max-height: 300px; 
+    overflow-y: auto;
+    margin: 20px 0;
+}
+
+/* Estilo para la cabecera de la tabla */
+.book-table thead {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.book-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1em;
+    font-family: 'Arial', sans-serif;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.book-table th,
+.book-table td {
+    padding: 12px 15px;
+    text-align: left;
+}
+
+.book-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.book-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.book-table tbody tr:last-of-type {
+    border-bottom: 2px solid #4CAF50;
+}
+
+/* Estilo para dispositivos móviles */
+@media (max-width: 768px) {
+    .modal3 {
+        width: 90%;
+        max-width: none;
+    }
+    .modal-body3 {
+        padding: 15px;
+    }
+    .part-col3, .form-col {
+        width: 100%;
+        margin-right: 0;
+    }
+    .btn-confirmar {
+        flex-direction: column;
+    }
+    .book-table {
+        width: 100%;
+        font-size: 90%;
+    }
+    .book-table th, .book-table td {
+        display: block;
+        width: 100%;
+    }
+    .book-table th {
+        text-align: left;
+    }
+    .book-table td {
+        border-bottom: 1px solid #f0f0f0;
+    }
+}
+
+#confirmacionBackdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

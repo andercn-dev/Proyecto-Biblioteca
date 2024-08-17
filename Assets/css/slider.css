@@ -1,0 +1,87 @@
+.section-header {
+    position: relative;
+    text-align: center;
+}
+
+.section-header h2 {
+    position: relative;
+    font-size: 36px;
+    font-weight: 500;
+    padding-top: 35px;
+    padding-bottom: 35px;
+}
+
+.section-header h2:before {
+    position: absolute;
+    content: "";
+    width: 80px;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    margin-left: -42px;
+    background: #4e4ffa;
+}
+
+#ecarrusel1,
+#ecarrusel2 {
+    padding: 5%;
+}
+
+.tmImagen {
+    max-width: 50%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.elemento h3 {
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+
+/* Flechas */
+.owl-prev,
+.owl-next,
+.owl-carousel .owl-nav .owl-prev,
+.owl-carousel .owl-nav .owl-next {
+    /* position: absolute; */
+    top: 50%;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background: #4CAF50;
+    color: #fff;
+    font-size: 26px;
+    transition: all 0.4s ease;
+    border-radius: 50%;
+}
+
+.owl-prev:hover,
+.owl-next:hover,
+.owl-carousel .owl-nav .owl-prev:hover,
+.owl-carousel .owl-nav .owl-next:hover {
+    background: #2C2D3F;
+    color: #fff;
+}
+
+.owl-prev,
+.owl-carousel .owl-nav .owl-prev {
+    left: -25px;
+}
+
+.owl-next,
+.owl-carousel .owl-nav .owl-next {
+    right: -25px;
+}
+
+.owl-carousel .owl-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    margin-top: -25px;
+    display: flex;
+    justify-content: space-between;
+}
+

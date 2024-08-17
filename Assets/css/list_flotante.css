@@ -1,0 +1,124 @@
+/* Css de la lista flotante */
+.floating-container {
+    position: fixed;
+    top: 20%;
+    right: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    z-index: 1000;
+}
+
+.floating-button {
+    width: 60px;
+    height: 60px;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.floating-list {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    display: none;
+    margin-top: 10px;
+    width: 240px;
+}
+
+.floating-list ul {
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.floating-list ul li {
+    padding: 8px 0;
+    border-bottom: 1px solid #ddd;
+    font-size: 12px;
+}
+
+.floating-list ul li:last-child {
+    border-bottom: none;
+}
+
+.floating-list ul li img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    border-radius: 3px;
+    vertical-align: middle;
+}
+
+#floatingBookList li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.remove-btn {
+    background: transparent;
+    padding-left: 5px;
+    color: red;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+#emptyMessage {
+    font-family: "Playwrite DE Grund";
+    text-align: center;
+    font-size: 17px;
+    margin-top: 13px;
+    margin-left: 8px;
+}
+
+#confirmButton {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 0 0 8px 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#confirmButton:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+@media screen and (max-width: 600px) {
+    .floating-container {
+        right: 30px;
+        z-index: 2;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .floating-container {
+        right: 20px;
+        z-index: 2;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    .floating-container {
+        right: 20px;
+        z-index: 2;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
