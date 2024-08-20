@@ -66,7 +66,42 @@ document.addEventListener('DOMContentLoaded', function () {
             const ul = document.createElement('ul');
             librosPorFecha[fechaTexto].forEach(libro => {
                 const li = document.createElement('li');
-                li.textContent = libro.libro_titulo; 
+    
+                const itemContainer = document.createElement('div');
+                itemContainer.classList.add('item-container');
+    
+                const imagen = document.createElement('img');
+                imagen.src = base_url + 'Assets/img/PortadaLibros/' + libro.imagen;
+                imagen.alt = libro.libro_titulo;
+                imagen.classList.add('libro-imagen');
+                
+                const textContainer = document.createElement('div');
+                textContainer.classList.add('text-container');
+                
+                const titulo = document.createElement('h4');
+                titulo.textContent = libro.libro_titulo;
+                
+                const autor = document.createElement('p');
+                autor.textContent = `Autor: ${libro.autor}`;
+                
+                const especialidad = document.createElement('p');
+                especialidad.textContent = `Especialidad: ${libro.especialidad}`;
+                
+                textContainer.appendChild(titulo);
+                textContainer.appendChild(autor);
+                textContainer.appendChild(especialidad);
+    
+                const estado = document.createElement('p');
+                estado.textContent = libro.estado === 1 ? 'No devuelto' : 'Devuelto';
+                estado.classList.add(libro.estado === 1 ? 'estado-no-devuelto' : 'estado-devuelto');
+                estado.classList.add('estado');
+    
+                textContainer.appendChild(estado);
+                
+                itemContainer.appendChild(imagen);
+                itemContainer.appendChild(textContainer);
+                
+                li.appendChild(itemContainer);
                 ul.appendChild(li);
             });
             listGroup.appendChild(ul);
@@ -75,8 +110,6 @@ document.addEventListener('DOMContentLoaded', function () {
     
         panel.appendChild(leftPanel);
     }
-    
-    
     
     
 
