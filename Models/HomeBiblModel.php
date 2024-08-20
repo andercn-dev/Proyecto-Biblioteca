@@ -76,14 +76,14 @@ class HomeBiblModel extends Query
     public function getlistsolicitados($id_estudiante)
     {
         $sql = "SELECT e.id, CONCAT(e.nombre, ' ', e.apellido) AS nombre_completo, 
-                    l.id AS libro_id, l.titulo AS libro_titulo, 
-                    p.id AS prestamo_id, p.id_estudiante, p.id_libro, 
-                    p.fecha_prestamo, p.fecha_devolucion, p.cantidad, 
-                    p.observacion, p.estado 
-                FROM estudiante e 
-                INNER JOIN prestamo p ON p.id_estudiante = e.id
-                INNER JOIN libro l ON p.id_libro = l.id 
-                WHERE p.id_estudiante = $id_estudiante";
+        l.id AS libro_id, l.titulo AS libro_titulo, l.imagen, l.autor, l.especialidad,
+        p.id AS prestamo_id, p.id_estudiante, p.id_libro, 
+        p.fecha_prestamo, p.fecha_devolucion, p.cantidad, 
+        p.observacion, p.estado 
+        FROM estudiante e 
+        INNER JOIN prestamo p ON p.id_estudiante = e.id
+        INNER JOIN libro l ON p.id_libro = l.id 
+        WHERE p.id_estudiante = $id_estudiante;";
 
         $res = $this->selectAll($sql);
 
